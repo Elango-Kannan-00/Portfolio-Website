@@ -133,7 +133,7 @@ function App() {
         {
           id: "lead-eldp",
           title:
-            "Entreprenuership and Leadership Development Program - Finalist",
+            "Finalist - Entreprenuership and Leadership Development Program",
           image: "/images/achievements/Leadership/ELDP.jpg",
           detail:
             "Selected as a finalist in Moonshot Inc’s Entrepreneurship and Leadership Development Program; led a team through ideation, strategy development, and final-round presentation.",
