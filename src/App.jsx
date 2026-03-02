@@ -416,7 +416,7 @@ function App() {
     <div className="App">
       {/* SECTION 1: INTRODUCTION */}
       <section id="home" className="section">
-        <h2 style={{ fontSize: "5.1rem" }}>
+        <h2 className="hero-title">
           Hello World, Welcome you all to <TypingText text="EK's Portfolio" />
           <span className="blinking-exclamation">!</span>
         </h2>
@@ -446,6 +446,7 @@ function App() {
             </p>
 
             <div
+              className="about-columns"
               style={{
                 display: "flex",
                 justifyContent: "space-between",
@@ -454,10 +455,13 @@ function App() {
                 flexWrap: "wrap",
               }}
             >
-              <div style={{ flex: 1, minWidth: "320px", textAlign: "left" }}>
+              <div
+                className="about-column"
+                style={{ flex: 1, minWidth: "320px", textAlign: "left" }}
+              >
                 <h3 className="about-subtitle">Academic Information</h3>
                 <div
-                  className="about-card"
+                  className="about-card about-card-academic"
                   style={{
                     width: "100%",
                     maxWidth: "460px",
@@ -542,7 +546,10 @@ function App() {
                 </div>
               </div>
 
-              <div style={{ flex: 1, minWidth: "320px", textAlign: "left" }}>
+              <div
+                className="about-column"
+                style={{ flex: 1, minWidth: "320px", textAlign: "left" }}
+              >
                 <h3 className="about-subtitle">Academic Progress</h3>
                 <div
                   className="about-card"
