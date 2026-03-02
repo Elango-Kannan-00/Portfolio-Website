@@ -45,7 +45,7 @@ function App() {
       description:
         "A content-based recommendation system that analyzes article titles to understand user intent and suggests the top 5 similar articles instantly. Built with Machine Learning and deployed using Flask for real-time interaction.",
       image: "/images/projects/article.jpg",
-      demoLink: "#",
+      demoLink: "https://article-recommendation.vercel.app/",
       githubLink: "https://github.com/Logic-Loom-00/Article_Recommendation.git",
     },
     {
