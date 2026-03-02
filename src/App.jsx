@@ -466,7 +466,6 @@ function App() {
                     width: "100%",
                     maxWidth: "460px",
                     margin: "0 auto",
-                    paddingLeft: "30px",
                   }}
                 >
                   <p

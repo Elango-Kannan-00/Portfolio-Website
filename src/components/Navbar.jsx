@@ -12,21 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      style={{
-        position: "fixed",
-        bottom: "20px",
-        left: "50%",
-        transform: "translateX(-50%)",
-        backgroundColor: "#a3c1ad",
-        padding: "16px 34px",
-        borderRadius: "10px", // 4px-5px as requested
-        display: "flex",
-        gap: "38px",
-        zIndex: 1000,
-        boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-      }}
-    >
+    <nav className="floating-navbar">
       {/* These hrefs link to the id="home", id="about", etc. in App.jsx */}
       <a
         className="navbar-icon-link"
