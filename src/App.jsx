@@ -910,15 +910,21 @@ function App() {
             below and I'll get back to you!
           </p>
 
-          <form className="contact-form">
+          <form
+            className="contact-form"
+            action="https://formspree.io/f/mojnoqql"
+            method="POST"
+          >
             <label className="contact-label" htmlFor="contact-name">
               NAME
             </label>
             <input
               id="contact-name"
+              name="name"
               type="text"
               className="contact-input"
               placeholder="Your full name"
+              required
             />
 
             <label className="contact-label" htmlFor="contact-email">
@@ -926,9 +932,11 @@ function App() {
             </label>
             <input
               id="contact-email"
+              name="email"
               type="email"
               className="contact-input"
               placeholder="your@email.com"
+              required
             />
 
             <label className="contact-label" htmlFor="contact-message">
@@ -936,9 +944,11 @@ function App() {
             </label>
             <textarea
               id="contact-message"
+              name="message"
               className="contact-textarea"
               placeholder="Write your message here..."
               rows="6"
+              required
             ></textarea>
 
             <button className="contact-send-btn" type="submit">
