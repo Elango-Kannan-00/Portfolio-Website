@@ -475,7 +475,7 @@ function App() {
                       color: "var(--primary)",
                     }}
                   >
-                    KG to 10th Grade
+                    SSLC
                   </p>
                   <p style={{ margin: "0 0 6px 0" }}>
                     <span className="about-label about-label-with-icon">
@@ -501,7 +501,7 @@ function App() {
                       color: "var(--primary)",
                     }}
                   >
-                    11th - 12th Grade
+                    HSC
                   </p>
                   <p style={{ margin: "0 0 6px 0" }}>
                     <span className="about-label about-label-with-icon">
