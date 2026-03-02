@@ -42,23 +42,30 @@ function App() {
 
   const projectsData = [
     {
-      title: "Project Alpha",
+      title: "Article Recommendation",
       description: "A modern web application built with React and Node.js.",
-      image: "/images/projects/project-alpha.jpg",
+      image: "/images/projects/article.jpg",
       demoLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/Logic-Loom-00/Article_Recommendation.git",
     },
     {
-      title: "Project Beta",
+      title: "Emission-X",
       description: "A full-stack Java application with Spring Boot backend.",
-      image: "/images/projects/project-beta.jpg",
+      image: "/images/projects/emission x.png",
       demoLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/CarbonFootprint-Hackathon/CarbonFootprint.git",
     },
     {
-      title: "Project Gamma",
+      title: "Expense-Tracker",
       description: "A UI/UX prototype built with Figma and implemented on web.",
-      image: "/images/projects/project-gamma.jpg",
+      image: "/images/projects/expense tracker.png",
+      demoLink: "https://expense-tracker-sandy-iota.vercel.app/",
+      githubLink: "https://github.com/Elango-Kannan-00/Expense-Tracker.git",
+    },
+    {
+      title: "SleepSentrix",
+      description: "A UI/UX prototype built with Figma and implemented on web.",
+      image: "/images/projects/sleepwalking.jpg",
       demoLink: "#",
       githubLink: "#",
     },
