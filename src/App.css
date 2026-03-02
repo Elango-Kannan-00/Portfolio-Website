@@ -39,7 +39,9 @@ body {
   max-width: 100%;
   transform: scale(1);
   filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.26));
-  transition: transform 320ms ease, filter 320ms ease;
+  transition:
+    transform 320ms ease,
+    filter 320ms ease;
 }
 
 .profile-canvas:hover img {
