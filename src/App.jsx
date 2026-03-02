@@ -43,28 +43,28 @@ function App() {
   const projectsData = [
     {
       title: "Article Recommendation",
-      description: "A modern web application built with React and Node.js.",
+      description: "A content-based recommendation system that analyzes article titles to understand user intent and suggests the top 5 similar articles instantly. Built with Machine Learning and deployed using Flask for real-time interaction.",
       image: "/images/projects/article.jpg",
       demoLink: "#",
       githubLink: "https://github.com/Logic-Loom-00/Article_Recommendation.git",
     },
     {
       title: "Emission-X",
-      description: "A full-stack Java application with Spring Boot backend.",
+      description: "A web application that monitors industrial CO₂ emissions and uses Machine Learning models to analyze emission levels and suggest eco-friendly mitigation strategies.",
       image: "/images/projects/emission x.png",
       demoLink: "#",
       githubLink: "https://github.com/CarbonFootprint-Hackathon/CarbonFootprint.git",
     },
     {
       title: "Expense-Tracker",
-      description: "A UI/UX prototype built with Figma and implemented on web.",
+      description: "A simple web application that helps users track their spending and visualize expenses using interactive bar, line, and pie charts.",
       image: "/images/projects/expense tracker.png",
       demoLink: "https://expense-tracker-sandy-iota.vercel.app/",
       githubLink: "https://github.com/Elango-Kannan-00/Expense-Tracker.git",
     },
     {
       title: "SleepSentrix",
-      description: "A UI/UX prototype built with Figma and implemented on web.",
+      description: "An IoT-enabled smart ankle band that uses sensors like accelerometer, gyroscope, GPS, and camera to monitor movement and send real-time alerts to loved ones in case of emergencies.",
       image: "/images/projects/sleepwalking.jpg",
       demoLink: "#",
       githubLink: "#",
