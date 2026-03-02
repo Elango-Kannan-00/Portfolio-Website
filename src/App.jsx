@@ -6,7 +6,6 @@ import {
   GraduationCap,
   Trophy,
   Mail,
-  Phone,
   Linkedin,
   Github,
   BookOpen,
@@ -166,7 +165,7 @@ function App() {
         },
         {
           id: "code-to-career",
-          title: "Technical Speaker – Code to Career Symposium",
+          title: "Technical Speaker - Workshop : Code to Career",
           image: "/images/achievements/Leadership/code-to-career.jpeg",
           detail:
             "Delivered a technical talk during our college symposium workshop 'Code to Career' on the topics of Data Science, Data Engineering, Data Analytics, and LinkedIn Profile Management. Guided students on career pathways, required skillsets, and strategies to build a strong professional presence.",
@@ -1023,7 +1022,7 @@ function App() {
               <div className="carousel-dots">
                 {currentCarouselItems.map((item, index) => (
                   <button
-                    key={item.title}
+                    key={item.id ?? `${item.title}-${index}`}
                     className={`carousel-dot ${index === activeAchievementIndex ? "active" : ""}`}
                     onClick={() => setActiveAchievementIndex(index)}
                   />
