@@ -205,6 +205,14 @@ function App() {
           detail:
             "Completed NPTEL certification and developed strong understanding of network analysis, graph theory, and real-world social network applications.",
         },
+        {
+          id: "cert-mysql",
+          title: "Learnz Connect Certification - MySQL",
+          image:
+            "/images/achievements/Certifications/MySQL.png",
+          detail:
+            "Completed LearnzConnect certification and developed strong understanding of MySQL basics.",
+        },
       ],
     },
   ];
@@ -245,6 +253,15 @@ function App() {
         "/images/achievements/Extra-Curriculars/Sports and Others/ZoneLevel-200m-Runner.jpeg",
       detail:
         "Secured 2nd place in the 200m sprint at the Zonal Level Athletics Meet, demonstrating speed, endurance, and competitive performance.",
+    },
+    // 🟡 Zone Level Hockey 2nd Runner-Up
+    {
+      id: "sports-zonelevel-hockey-2nd runnerup",
+      title: "Zonal Hockey - Third Prize",
+      image:
+        "/images/achievements/Extra-Curriculars/Sports and Others/Hockey Third Prize.png",
+      detail:
+        "Won Third Prize at Anna University Zonal Sports meet for the sport Hockey held at Adhiyamaan Engineering College, Hosur.",
     },
     // 🥇 100m Sprint Winner (1)
     {
