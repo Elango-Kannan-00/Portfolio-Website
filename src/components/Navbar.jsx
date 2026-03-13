@@ -13,7 +13,6 @@ const Navbar = () => {
 
   return (
     <nav className="floating-navbar">
-      {/* These hrefs link to the id="home", id="about", etc. in App.jsx */}
       <a
         className="navbar-icon-link"
         href="#home"
