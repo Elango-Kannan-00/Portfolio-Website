@@ -289,6 +289,9 @@ body {
   border-radius: 15px;
   overflow: hidden;
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card:hover {
@@ -313,6 +316,9 @@ body {
 .project-content {
   padding: 18px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-title {
@@ -331,6 +337,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
+  margin-top: auto;
 }
 
 .project-btn {
