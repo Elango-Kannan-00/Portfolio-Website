@@ -176,6 +176,29 @@ function App() {
       title: "Certifications",
       items: [
         {
+          id: "cefr",
+          title: "EF SET - CEFR Certification (B2 Upper Intermediate)",
+          image: "/images/achievements/Certifications/EF SET Certificate.jpg",
+          detail:
+            "Demonstrated upper-intermediate English proficiency in listening, speaking, reading, and writing based on the CEFR standard. Able to communicate effectively in professional and academic contexts with clear understanding of complex content.",
+        },
+        {
+          id: "html",
+          title: "GeeksforGeeks - Foundations of HTML",
+          image: 
+            "/images/achievements/Certifications/Foundation of HTML.jpg",
+          detail:
+            "Learned core HTML concepts including semantic elements, page structure, forms, links, and media integration. Built a strong foundation for creating well-structured and accessible web pages.",
+        },
+        {
+          id: "html",
+          title: "GeeksforGeeks - Foundations of CSS",
+          image: 
+            "/images/achievements/Certifications/Foundation of CSS.jpg",
+          detail:
+            "Learned core HTML concepts including semantic elements, page structure, forms, links, and media integration. Built a strong foundation for creating well-structured and accessible web pages.",
+        },
+        {
           id: "cert-industry-4",
           title: "NPTEL Certification - Industry 4.0 (Elite)",
           image: "/images/achievements/Certifications/Industry 4.o.jpg",
@@ -212,6 +235,14 @@ function App() {
             "/images/achievements/Certifications/MySQL.png",
           detail:
             "Completed LearnzConnect certification and developed strong understanding of MySQL basics.",
+        },
+        {
+          id: "aifluency",
+          title: "AI Fluency: Framework and Foundations",
+          image: 
+            "/images/achievements/Certifications/AI Fluency Framework and Foundations.jpg",
+          detail:
+            "Completed Anthropic Academy certification on AI Fluency: Framework and Foundations, where I came to know about the 4D's and basics of Prompt Engineering.",
         },
       ],
     },
