@@ -655,6 +655,31 @@ function App() {
         <h2 className="section-title about-main-title">Skills</h2>
         <div className="skills-layout">
           <div className="skills-group">
+            <h3 className="skills-group-title">Programming Languages</h3>
+            <div className="skills-items-grid">
+              <div className="skill-item">
+                <div className="skill-square-card">
+                  <img
+                    className="skill-icon"
+                    src="/images/skills/java.png"
+                    alt="Java"
+                  />
+                </div>
+                <span className="skill-label">Java</span>
+              </div>
+              <div className="skill-item">
+                <div className="skill-square-card">
+                  <img
+                    className="skill-icon"
+                    src="/images/skills/python.png"
+                    alt="Python"
+                  />
+                </div>
+                <span className="skill-label">Python</span>
+              </div>
+            </div>
+          </div>
+          <div className="skills-group">
             <h3 className="skills-group-title">Frontend Development</h3>
             <div className="skills-items-grid">
               <div className="skill-item">
@@ -710,53 +735,58 @@ function App() {
             </div>
           </div>
           <div className="skills-group">
-            <h3 className="skills-group-title">Programming Language</h3>
+            <h3 className="skills-group-title">Backend Development</h3>
             <div className="skills-items-grid">
               <div className="skill-item">
                 <div className="skill-square-card">
                   <img
                     className="skill-icon"
-                    src="/images/skills/java.png"
-                    alt="Java"
+                    src="/images/skills/fastapi.svg"
+                    alt="FastAPI"
                   />
                 </div>
-                <span className="skill-label">Java</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/python.png"
-                    alt="Python"
-                  />
-                </div>
-                <span className="skill-label">Python</span>
+                <span className="skill-label">FastAPI</span>
               </div>
             </div>
           </div>
           <div className="skills-group">
-            <h3 className="skills-group-title">DevTools</h3>
+            <h3 className="skills-group-title">Database</h3>
             <div className="skills-items-grid">
               <div className="skill-item">
                 <div className="skill-square-card">
                   <img
                     className="skill-icon"
-                    src="/images/skills/git.png"
-                    alt="Git"
+                    src="/images/skills/mysql.png"
+                    alt="MySQL"
                   />
                 </div>
-                <span className="skill-label">GIT</span>
+                <span className="skill-label">MYSQL</span>
               </div>
               <div className="skill-item">
                 <div className="skill-square-card">
                   <img
                     className="skill-icon"
-                    src="/images/skills/github.png"
-                    alt="GitHub"
+                    src="/images/skills/postgres.png"
+                    alt="Postgres"
                   />
                 </div>
-                <span className="skill-label">GITHUB</span>
+                <span className="skill-label">POSTGRES</span>
               </div>
+              <div className="skill-item">
+                <div className="skill-square-card">
+                  <img
+                    className="skill-icon"
+                    src="/images/skills/mongo.png"
+                    alt="MongoDB"
+                  />
+                </div>
+                <span className="skill-label">MONGO</span>
+              </div>
+            </div>
+          </div>
+          <div className="skills-group">
+            <h3 className="skills-group-title">Tools and IDEs</h3>
+            <div className="skills-items-grid">
               <div className="skill-item">
                 <div className="skill-square-card">
                   <img
@@ -767,11 +797,16 @@ function App() {
                 </div>
                 <span className="skill-label">VS CODE</span>
               </div>
-            </div>
-          </div>
-          <div className="skills-group">
-            <h3 className="skills-group-title">Prototype and Design</h3>
-            <div className="skills-items-grid">
+              <div className="skill-item">
+                <div className="skill-square-card">
+                  <img
+                    className="skill-icon"
+                    src="/images/skills/intellij.png"
+                    alt="IntelliJ"
+                  />
+                </div>
+                <span className="skill-label">INTELLIJ</span>
+              </div>
               <div className="skill-item">
                 <div className="skill-square-card">
                   <img
@@ -791,6 +826,41 @@ function App() {
                   />
                 </div>
                 <span className="skill-label">Canva</span>
+              </div>
+              <div className="skill-item">
+                <div className="skill-square-card">
+                  <img
+                    className="skill-icon"
+                    src="/images/skills/vercel.png"
+                    alt="Vercel"
+                  />
+                </div>
+                <span className="skill-label">VERCEL</span>
+              </div>
+            </div>
+          </div>
+          <div className="skills-group">
+            <h3 className="skills-group-title">API and Testing</h3>
+            <div className="skills-items-grid">
+              <div className="skill-item">
+                <div className="skill-square-card">
+                  <img
+                    className="skill-icon"
+                    src="/images/skills/postman.png"
+                    alt="Postman"
+                  />
+                </div>
+                <span className="skill-label">POSTMAN</span>
+              </div>
+              <div className="skill-item">
+                <div className="skill-square-card">
+                  <img
+                    className="skill-icon"
+                    src="/images/skills/swagger.png"
+                    alt="Swagger"
+                  />
+                </div>
+                <span className="skill-label">SWAGGER</span>
               </div>
             </div>
           </div>
