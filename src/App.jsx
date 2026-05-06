@@ -972,7 +972,7 @@ function App() {
                   <Mail size={16} />
                 </span>
                 <span className="contact-detail-label">Email ID</span> -
-                elango.kiot@gamil.com
+                elango.kiot@gmail.com
               </p>
               {/* <p>
                 <span className="contact-detail-icon" aria-hidden="true">
