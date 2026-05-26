@@ -1,8 +1,8 @@
-import React from "react";
+import Dock from "./Dock";
+import { Home, User, Wrench, FolderKanban, Trophy, Mail } from "lucide-react";
 
 const Navbar = () => {
-  const handleNavClick = (event, id) => {
-    event.preventDefault();
+  const handleNavClick = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -10,73 +10,41 @@ const Navbar = () => {
     }
   };
 
+  const items = [
+    {
+      icon: <Home className="navbar-nav-icon" aria-hidden="true" />,
+      label: "Home",
+      onClick: () => handleNavClick("home"),
+    },
+    {
+      icon: <User className="navbar-nav-icon" aria-hidden="true" />,
+      label: "About",
+      onClick: () => handleNavClick("about"),
+    },
+    {
+      icon: <Wrench className="navbar-nav-icon" aria-hidden="true" />,
+      label: "Skills",
+      onClick: () => handleNavClick("skills"),
+    },
+    {
+      icon: <FolderKanban className="navbar-nav-icon" aria-hidden="true" />,
+      label: "Projects",
+      onClick: () => handleNavClick("projects"),
+    },
+    {
+      icon: <Trophy className="navbar-nav-icon" aria-hidden="true" />,
+      label: "Achievements",
+      onClick: () => handleNavClick("achievements"),
+    },
+    {
+      icon: <Mail className="navbar-nav-icon" aria-hidden="true" />,
+      label: "Contact",
+      onClick: () => handleNavClick("contact"),
+    },
+  ];
+
   return (
-    <nav className="floating-navbar">
-      <a
-        className="navbar-icon-link"
-        href="#home"
-        title="Home"
-        onClick={(e) => handleNavClick(e, "home")}
-      >
-        <img src="/icons/home.png" alt="Home" className="navbar-icon-img" />
-      </a>
-      <a
-        className="navbar-icon-link"
-        href="#about"
-        title="About"
-        onClick={(e) => handleNavClick(e, "about")}
-      >
-        <img
-          src="/icons/about.png"
-          alt="About"
-          className="navbar-icon-img"
-        />
-      </a>
-      <a
-        className="navbar-icon-link"
-        href="#skills"
-        title="Skills"
-        onClick={(e) => handleNavClick(e, "skills")}
-      >
-        <img src="/icons/skills.png" alt="Skills" className="navbar-icon-img" />
-      </a>
-      <a
-        className="navbar-icon-link"
-        href="#projects"
-        title="Projects"
-        onClick={(e) => handleNavClick(e, "projects")}
-      >
-        <img
-          src="/icons/projects.png"
-          alt="Projects"
-          className="navbar-icon-img"
-        />
-      </a>
-      <a
-        className="navbar-icon-link"
-        href="#achievements"
-        title="Achievements"
-        onClick={(e) => handleNavClick(e, "achievements")}
-      >
-        <img
-          src="/icons/achievements.png"
-          alt="Achievements"
-          className="navbar-icon-img"
-        />
-      </a>
-      <a
-        className="navbar-icon-link"
-        href="#contact"
-        title="Contact"
-        onClick={(e) => handleNavClick(e, "contact")}
-      >
-        <img
-          src="/icons/contact.png"
-          alt="Contact"
-          className="navbar-icon-img"
-        />
-      </a>
-    </nav>
+    <Dock items={items} panelHeight={68} baseItemSize={50} magnification={70} />
   );
 };
 
