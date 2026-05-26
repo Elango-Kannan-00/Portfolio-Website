@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        "ek-primary": "#a3c1ad",
+        "ek-primary": "#FAF3E1",
         "ek-bg": "#000000",
         "ek-card": "#121212",
         "ek-text": "#ffffff",
@@ -25,4 +25,3 @@ export default {
   },
   plugins: [],
 };
-
