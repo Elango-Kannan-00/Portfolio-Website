@@ -1,6 +1,8 @@
 ﻿import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import PixelCard from "./components/PixelCard";
+import Particles from "./components/Particles";
 import { useDispatch, useSelector } from "react-redux";
 import {
   GraduationCap,
@@ -462,14 +464,32 @@ function App() {
 
   return (
     <div className="App">
+      <div className="app-effects" aria-hidden="true">
+        <Particles
+          particleColors={["#ffffff"]}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover
+          alphaParticles={false}
+          disableRotation={false}
+          pixelRatio={1}
+        />
+      </div>
       {/* SECTION 1: INTRODUCTION */}
       <section id="home" className="section">
-        <h2 className="hero-title">
-          Hello World, Welcome you all to <TypingText text="EK's Portfolio" />
-          <span className="blinking-exclamation">!</span>
-        </h2>
-        <div className="profile-canvas">
-          <img src="/images/profile/profile.png" alt="Elango Kannan profile" />
+        <div className="home-foreground">
+          <h2 className="hero-title">
+            Hello World, Welcome you all to <TypingText text="EK's Portfolio" />
+            <span className="blinking-exclamation">!</span>
+          </h2>
+          <PixelCard variant="pink" className="profile-canvas">
+            <img
+              src="/images/profile/profile.png"
+              alt="Elango Kannan profile"
+            />
+          </PixelCard>
         </div>
 
         <section id="about" className="section">

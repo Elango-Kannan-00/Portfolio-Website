@@ -1,5 +1,4 @@
 import React from "react";
-import { Home, User, Cpu, Briefcase, Award, MessageCircle } from "lucide-react";
 
 const Navbar = () => {
   const handleNavClick = (event, id) => {
@@ -19,7 +18,7 @@ const Navbar = () => {
         title="Home"
         onClick={(e) => handleNavClick(e, "home")}
       >
-        <Home size={36} />
+        <img src="/icons/home.png" alt="Home" className="navbar-icon-img" />
       </a>
       <a
         className="navbar-icon-link"
@@ -27,7 +26,11 @@ const Navbar = () => {
         title="About"
         onClick={(e) => handleNavClick(e, "about")}
       >
-        <User size={36} />
+        <img
+          src="/icons/about.png"
+          alt="About"
+          className="navbar-icon-img"
+        />
       </a>
       <a
         className="navbar-icon-link"
@@ -35,7 +38,7 @@ const Navbar = () => {
         title="Skills"
         onClick={(e) => handleNavClick(e, "skills")}
       >
-        <Cpu size={36} />
+        <img src="/icons/skills.png" alt="Skills" className="navbar-icon-img" />
       </a>
       <a
         className="navbar-icon-link"
@@ -43,7 +46,11 @@ const Navbar = () => {
         title="Projects"
         onClick={(e) => handleNavClick(e, "projects")}
       >
-        <Briefcase size={36} />
+        <img
+          src="/icons/projects.png"
+          alt="Projects"
+          className="navbar-icon-img"
+        />
       </a>
       <a
         className="navbar-icon-link"
@@ -51,7 +58,11 @@ const Navbar = () => {
         title="Achievements"
         onClick={(e) => handleNavClick(e, "achievements")}
       >
-        <Award size={36} />
+        <img
+          src="/icons/achievements.png"
+          alt="Achievements"
+          className="navbar-icon-img"
+        />
       </a>
       <a
         className="navbar-icon-link"
@@ -59,7 +70,11 @@ const Navbar = () => {
         title="Contact"
         onClick={(e) => handleNavClick(e, "contact")}
       >
-        <MessageCircle size={36} />
+        <img
+          src="/icons/contact.png"
+          alt="Contact"
+          className="navbar-icon-img"
+        />
       </a>
     </nav>
   );
