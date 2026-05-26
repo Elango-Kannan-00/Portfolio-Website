@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        "ek-primary": "#FAF3E1",
+        "ek-primary": "#FFFFFF",
         "ek-bg": "#000000",
         "ek-card": "#121212",
-        "ek-text": "#ffffff",
+        "ek-text": "#FFFFFF",
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["DM Sans", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       keyframes: {
         blinkExclamation: {
