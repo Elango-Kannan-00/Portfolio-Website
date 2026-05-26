@@ -6,7 +6,8 @@
 
 @layer base {
   :root {
-    --primary: #faf3e1;
+    --primary: #ffffff;
+    --heading: #fcbf49;
     --bg: #000000;
     --card-bg: #121212;
     --text: #ffffff;
@@ -69,7 +70,7 @@
         ),
       linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0))
         padding-box,
-      linear-gradient(90deg, rgba(255, 105, 180, 0.55), rgba(250, 243, 225, 0))
+      linear-gradient(90deg, rgba(255, 105, 180, 0.55), rgba(255, 255, 255, 0))
         border-box;
     border: 1px solid rgba(255, 105, 180, 0.35);
     box-shadow:
@@ -82,7 +83,7 @@
   }
 
   .pixel-card--mint::after {
-    border-color: rgba(250, 243, 225, 0.38);
+    border-color: rgba(255, 255, 255, 0.38);
   }
 
   .section {
@@ -136,12 +137,11 @@
   .ek-btn {
     padding: 16px 32px;
     font-size: 1.1rem;
-    background-color: var(--primary);
-    @apply text-black border-0 rounded-[5px] font-semibold cursor-pointer m-[10px] transition duration-300;
+    @apply bg-transparent text-[color:var(--text)] border border-[color:var(--primary)] rounded-[5px] font-semibold cursor-pointer m-[10px] transition duration-300;
   }
 
   .ek-btn:hover {
-    box-shadow: 0 0 15px rgba(250, 243, 225, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.22);
     @apply scale-105;
   }
 
@@ -151,6 +151,12 @@
 
   .navbar-icon-img {
     @apply w-9 h-9 object-contain;
+  }
+
+  .navbar-nav-icon {
+    width: 36px;
+    height: 36px;
+    color: #ffffff;
   }
 
   .navbar-icon-link:hover {
@@ -167,7 +173,7 @@
   }
 
   .blinking-exclamation {
-    color: var(--primary);
+    color: var(--heading);
     @apply inline-block ml-[3px] animate-blinkExclamation;
   }
 
@@ -189,6 +195,7 @@
   }
 
   .section-title {
+    color: var(--heading);
     @apply m-0 mb-10 font-bold;
   }
 
@@ -199,7 +206,7 @@
 
   .about-subtitle {
     text-underline-offset: 7px;
-    color: var(--primary);
+    color: var(--heading);
     @apply block text-center mb-10 text-[1.5rem] underline font-bold;
   }
 
@@ -213,12 +220,12 @@
   }
 
   .about-card:hover {
-    box-shadow: 0 0 15px rgba(250, 243, 225, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.16);
     @apply scale-105;
   }
 
   .about-label {
-    color: var(--primary);
+    color: var(--heading);
     @apply font-semibold;
   }
 
@@ -235,7 +242,7 @@
   }
 
   .about-progress-list li svg {
-    color: var(--primary);
+    color: var(--heading);
     @apply flex-[0_0_18px] w-[18px] h-[18px] mt-[6px];
   }
 
@@ -248,7 +255,7 @@
   }
 
   .skills-group-title {
-    color: var(--primary);
+    color: var(--heading);
     @apply m-0 mb-[30px] text-[2.5rem] text-center font-bold;
   }
 
@@ -275,7 +282,7 @@
   }
 
   .skill-square-card:hover {
-    box-shadow: 0 0 15px rgba(250, 243, 225, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.16);
     @apply scale-105;
   }
 
@@ -289,7 +296,7 @@
   }
 
   .project-card:hover {
-    box-shadow: 0 0 15px rgba(250, 243, 225, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.16);
     @apply scale-105;
   }
 
@@ -313,7 +320,7 @@
 
   .project-description {
     line-height: 1.5;
-    @apply m-0 mb-[18px] text-[#9ea9b8] text-[0.95rem];
+    @apply m-0 mb-[18px] text-[color:var(--text)] text-[0.95rem];
   }
 
   .project-actions {
@@ -333,12 +340,12 @@
   }
 
   .project-btn-github {
-    color: var(--primary);
+    color: var(--text);
     @apply bg-transparent;
   }
 
   .project-btn:hover {
-    box-shadow: 0 0 15px rgba(250, 243, 225, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.16);
     @apply scale-105;
   }
 
@@ -356,7 +363,7 @@
   }
 
   .achievement-category-title {
-    color: var(--primary);
+    color: var(--heading);
     @apply m-0 mb-[18px] text-left text-[2rem] font-bold;
   }
 
@@ -365,7 +372,7 @@
   }
 
   .achievement-card:hover {
-    box-shadow: 0 0 15px rgba(250, 243, 225, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.16);
     @apply scale-105;
   }
 
@@ -402,7 +409,7 @@
   }
 
   .carousel-close {
-    @apply absolute top-5 right-[22px] border-0 bg-transparent text-[#8f98a3] text-[2.2rem] leading-none cursor-pointer;
+    @apply absolute top-5 right-[22px] border-0 bg-transparent text-[color:var(--text)] text-[2.2rem] leading-none cursor-pointer;
   }
 
   .carousel-nav {
@@ -435,13 +442,13 @@
   }
 
   .carousel-title {
-    color: var(--primary);
+    color: var(--heading);
     @apply m-0 mb-3 text-[2rem] font-bold;
   }
 
   .carousel-detail {
     line-height: 1.7;
-    @apply m-0 text-[#c6cdd7] text-[1.2rem];
+    @apply m-0 text-[color:var(--text)] text-[1.2rem];
   }
 
   .carousel-dots {
@@ -463,6 +470,7 @@
 
   .contact-title {
     letter-spacing: 1.5px;
+    color: var(--heading);
     @apply m-0 mb-[70px] text-[4rem] text-center font-bold;
   }
 
@@ -471,7 +479,7 @@
   }
 
   .contact-details-row {
-    @apply flex justify-center flex-wrap gap-y-[14px] gap-x-10 text-[#b9c2ce] text-[1.2rem];
+    @apply flex justify-center flex-wrap gap-y-[14px] gap-x-10 text-[color:var(--text)] text-[1.2rem];
   }
 
   .contact-details-row p {
@@ -479,21 +487,21 @@
   }
 
   .contact-detail-label {
-    color: var(--primary);
+    color: var(--heading);
     @apply font-bold;
   }
 
   .contact-detail-link {
-    @apply text-[#d7dfeb] no-underline font-semibold;
+    @apply text-[color:var(--text)] no-underline font-semibold;
   }
 
   .contact-detail-link:hover {
-    color: var(--primary);
+    color: var(--heading);
     @apply underline;
   }
 
   .contact-detail-icon {
-    color: var(--primary);
+    color: var(--heading);
     @apply min-w-[36px] h-[36px] border border-[#2d3742] rounded-full inline-flex items-center justify-center text-[0.85rem];
   }
 
@@ -511,7 +519,7 @@
 
   .contact-intro {
     line-height: 1.6;
-    @apply m-0 mb-8 text-[#9ea9b8] text-[1.25rem] max-w-[920px];
+    @apply m-0 mb-8 text-[color:var(--text)] text-[1.25rem] max-w-[920px];
   }
 
   .contact-form {
@@ -520,7 +528,7 @@
 
   .contact-label {
     letter-spacing: 1px;
-    @apply text-[1rem] font-bold text-[#8f98a3] mt-2;
+    @apply text-[1rem] font-bold text-[color:var(--text)] mt-2;
   }
 
   .contact-input,
@@ -536,17 +544,16 @@
   .contact-input:focus,
   .contact-textarea:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(250, 243, 225, 0.15);
+    box-shadow: 0 0 0 2px rgba(252, 191, 73, 0.22);
   }
 
   .contact-send-btn {
     padding: 12px 22px;
-    background-color: var(--primary);
-    @apply mt-[18px] text-[#091019] border-0 rounded-[14px] text-[1.2rem] font-bold cursor-pointer w-fit transition duration-300;
+    @apply mt-[18px] bg-transparent text-[color:var(--text)] border border-[color:var(--primary)] rounded-[14px] text-[1.2rem] font-bold cursor-pointer w-fit transition duration-300;
   }
 
   .contact-send-btn:hover {
-    box-shadow: 0 0 15px rgba(250, 243, 225, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     @apply scale-105;
   }
 
@@ -556,17 +563,17 @@
   }
 
   .portfolio-like-text {
-    @apply m-0 text-[#d7dfeb] text-[1.15rem] whitespace-nowrap;
+    @apply m-0 text-[color:var(--text)] text-[1.15rem] whitespace-nowrap;
   }
 
   .portfolio-like-star-btn {
     border-color: var(--primary);
-    color: var(--primary);
+    color: var(--text);
     @apply w-[52px] h-[52px] rounded-full border bg-[#0f151c] inline-flex items-center justify-center cursor-pointer transition duration-300;
   }
 
   .portfolio-like-star-btn:hover {
-    box-shadow: 0 0 15px rgba(250, 243, 225, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     @apply scale-[1.08];
   }
 
@@ -575,7 +582,7 @@
   }
 
   .portfolio-like-count {
-    @apply m-0 text-[#9ea9b8] text-[1rem] whitespace-nowrap;
+    @apply m-0 text-[color:var(--text)] text-[1rem] whitespace-nowrap;
   }
 }
 

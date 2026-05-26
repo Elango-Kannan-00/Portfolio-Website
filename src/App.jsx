@@ -540,7 +540,7 @@ function App() {
                     style={{
                       marginBottom: "6px",
                       fontWeight: 600,
-                      color: "var(--primary)",
+                      color: "var(--heading)",
                     }}
                   >
                     SSLC
@@ -566,7 +566,7 @@ function App() {
                     style={{
                       marginBottom: "6px",
                       fontWeight: 600,
-                      color: "var(--primary)",
+                      color: "var(--heading)",
                     }}
                   >
                     HSC
@@ -591,7 +591,7 @@ function App() {
                     style={{
                       marginBottom: "6px",
                       fontWeight: 600,
-                      color: "var(--primary)",
+                      color: "var(--heading)",
                     }}
                   >
                     Bachelor of Engineering - CSE
