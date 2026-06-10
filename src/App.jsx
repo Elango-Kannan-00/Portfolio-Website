@@ -187,16 +187,14 @@ function App() {
         {
           id: "html",
           title: "GeeksforGeeks - Foundations of HTML",
-          image: 
-            "/images/achievements/Certifications/Foundation of HTML.jpg",
+          image: "/images/achievements/Certifications/Foundation of HTML.jpg",
           detail:
             "Learned core HTML concepts including semantic elements, page structure, forms, links, and media integration. Built a strong foundation for creating well-structured and accessible web pages.",
         },
         {
           id: "html",
           title: "GeeksforGeeks - Foundations of CSS",
-          image: 
-            "/images/achievements/Certifications/Foundation of CSS.jpg",
+          image: "/images/achievements/Certifications/Foundation of CSS.jpg",
           detail:
             "Learned core HTML concepts including semantic elements, page structure, forms, links, and media integration. Built a strong foundation for creating well-structured and accessible web pages.",
         },
@@ -233,15 +231,14 @@ function App() {
         {
           id: "cert-mysql",
           title: "Learnz Connect Certification - MySQL",
-          image:
-            "/images/achievements/Certifications/MySQL.png",
+          image: "/images/achievements/Certifications/MySQL.png",
           detail:
             "Completed LearnzConnect certification and developed strong understanding of MySQL basics.",
         },
         {
           id: "aifluency",
           title: "AI Fluency: Framework and Foundations",
-          image: 
+          image:
             "/images/achievements/Certifications/AI Fluency Framework and Foundations.jpg",
           detail:
             "Completed Anthropic Academy certification on AI Fluency: Framework and Foundations, where I came to know about the 4D's and basics of Prompt Engineering.",
@@ -632,22 +629,30 @@ function App() {
                   >
                     {/* <li><Trophy size={16} /> </li> */}
                     <li>
-                      <Trophy size={16} /> Ranked 1st in school among all
-                      students by securing 93.83% in Grade 12.
+                      <Trophy size={16} /> Ranked 1st in school with 93.83% in
+                      Grade 12.
                     </li>
                     <li>
-                      <Trophy size={16} /> Consistently maintaining a CGPA of
-                      8.893/10 across 5 semesters
+                      <Trophy size={16} /> Ranked 3rd in school with 78% in
+                      Grade 11.
+                    </li>
+                    <li>
+                      <Trophy size={16} /> Maintaining a CGPA of 8.893/10 across
+                      5 semesters.
                     </li>
                     <li>
                       <Trophy size={16} /> Recipient of the Achiever Award 2026
-                      - recognized for outstanding contributions to academic,
-                      co-curricular, and extra-curricular activities.
+                      for excellence in academics, co-curricular, and
+                      extra-curricular activities.
                     </li>
                     <li>
-                      <Trophy size={16} /> Actively representing Knowledge
-                      Institute of Technology as a GeeksforGeeks Campus
-                      Ambassador, promoting coding culture and tech awareness.
+                      <Trophy size={16} /> Served as a GeeksforGeeks Campus
+                      Ambassador, promoting coding and tech culture.
+                    </li>
+                    <li>
+                      <Trophy size={16} /> Secured a Top 500 position in Niral
+                      Thiruvizha 3.0 and received ₹15,000 for prototype
+                      development.
                     </li>
                   </ul>
                 </div>
@@ -675,7 +680,6 @@ function App() {
         <h2 className="section-title about-main-title">Skills</h2>
         <div className="skills-layout">
           <div className="skills-group">
-            <h3 className="skills-group-title">Programming Languages</h3>
             <div className="skills-items-grid">
               <div className="skill-item">
                 <div className="skill-square-card">
@@ -697,11 +701,6 @@ function App() {
                 </div>
                 <span className="skill-label">Python</span>
               </div>
-            </div>
-          </div>
-          <div className="skills-group">
-            <h3 className="skills-group-title">Frontend Development</h3>
-            <div className="skills-items-grid">
               <div className="skill-item">
                 <div className="skill-square-card">
                   <img
@@ -736,27 +735,12 @@ function App() {
                 <div className="skill-square-card">
                   <img
                     className="skill-icon"
-                    src="/images/skills/react.png"
-                    alt="React"
+                    src="/images/skills/spring-logo.png"
+                    alt="FastAPI"
                   />
                 </div>
-                <span className="skill-label">REACT</span>
+                <span className="skill-label">SpringBoot</span>
               </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/redux.png"
-                    alt="Redux"
-                  />
-                </div>
-                <span className="skill-label">REDUX</span>
-              </div>
-            </div>
-          </div>
-          <div className="skills-group">
-            <h3 className="skills-group-title">Backend Development</h3>
-            <div className="skills-items-grid">
               <div className="skill-item">
                 <div className="skill-square-card">
                   <img
@@ -767,11 +751,6 @@ function App() {
                 </div>
                 <span className="skill-label">FastAPI</span>
               </div>
-            </div>
-          </div>
-          <div className="skills-group">
-            <h3 className="skills-group-title">Database</h3>
-            <div className="skills-items-grid">
               <div className="skill-item">
                 <div className="skill-square-card">
                   <img
@@ -796,21 +775,6 @@ function App() {
                 <div className="skill-square-card">
                   <img
                     className="skill-icon"
-                    src="/images/skills/mongo.png"
-                    alt="MongoDB"
-                  />
-                </div>
-                <span className="skill-label">MONGO</span>
-              </div>
-            </div>
-          </div>
-          <div className="skills-group">
-            <h3 className="skills-group-title">Tools and IDEs</h3>
-            <div className="skills-items-grid">
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
                     src="/images/skills/vscode.png"
                     alt="VS Code"
                   />
@@ -821,11 +785,21 @@ function App() {
                 <div className="skill-square-card">
                   <img
                     className="skill-icon"
-                    src="/images/skills/intellij.png"
-                    alt="IntelliJ"
+                    src="/images/skills/eclipse.png"
+                    alt="VS Code"
                   />
                 </div>
-                <span className="skill-label">INTELLIJ</span>
+                <span className="skill-label">Eclipse</span>
+              </div>
+              <div className="skill-item">
+                <div className="skill-square-card">
+                  <img
+                    className="skill-icon"
+                    src="/images/skills/github.png"
+                    alt="VS Code"
+                  />
+                </div>
+                <span className="skill-label">Github</span>
               </div>
               <div className="skill-item">
                 <div className="skill-square-card">
@@ -847,21 +821,6 @@ function App() {
                 </div>
                 <span className="skill-label">Canva</span>
               </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/vercel.png"
-                    alt="Vercel"
-                  />
-                </div>
-                <span className="skill-label">VERCEL</span>
-              </div>
-            </div>
-          </div>
-          <div className="skills-group">
-            <h3 className="skills-group-title">API and Testing</h3>
-            <div className="skills-items-grid">
               <div className="skill-item">
                 <div className="skill-square-card">
                   <img
