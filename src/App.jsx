@@ -5,7 +5,9 @@ import PixelCard from "./components/PixelCard";
 import Particles from "./components/Particles";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  Download,
   GraduationCap,
+  FolderKanban,
   Trophy,
   Mail,
   Linkedin,
@@ -14,23 +16,6 @@ import {
   Star,
 } from "lucide-react";
 import { incrementLike, hydrateLikeState } from "./store/portfolioSlice";
-
-const TypingText = ({ text }) => {
-  const [displayed, setDisplayed] = useState("");
-  const [idx, setIdx] = useState(0);
-
-  useEffect(() => {
-    if (idx < text.length) {
-      const t = setTimeout(() => {
-        setDisplayed((prev) => prev + text[idx]);
-        setIdx(idx + 1);
-      }, 100);
-      return () => clearTimeout(t);
-    }
-  }, [idx, text]);
-
-  return <span>{displayed}</span>;
-};
 
 function App() {
   const [activeAchievementCategory, setActiveAchievementCategory] =
@@ -79,102 +64,7 @@ function App() {
 
   const achievementCategories = [
     {
-      title: "Co-Curriculars",
-      items: [
-        {
-          id: "co-11th-rank",
-          title: "School Topper (11th Grade) - AY 2022",
-          image: "/images/achievements/Co-Curriculars/11th rank.jpeg",
-          detail:
-            "School Topper – Overall 3rd Rank (11th Grade) - Recognized as School Topper for securing Overall 3rd Rank in Grade 11 through consistent academic excellence.",
-        },
-        {
-          id: "co-12th-rank",
-          title: "School Topper (12th Grade) - AY 2023",
-          image: "/images/achievements/Co-Curriculars/12th rank.jpeg",
-          detail:
-            "School Topper – Overall 1st Rank (12th Grade) - Recognized as School Topper for securing Overall 1st Rank in Grade 12 through consistent academic excellence.",
-        },
-        {
-          id: "co-academic-topper",
-          title: "Academic Topper - 1st Year",
-          image:
-            "/images/achievements/Co-Curriculars/Academic Topper 1st YR.jpg",
-          detail:
-            "Earned the Academic Topper Award in my first year for achieving high academic standards throughout the year by scoring CGPA 9.216/10.",
-        },
-        {
-          id: "co-paper-publication",
-          title: "Research Paper Publication - SleepSentrix",
-          image: "/images/achievements/Co-Curriculars/EK-Paper_Publishment.jpg",
-          detail:
-            "Published a research paper in IRJAEH for the project - SleepSentrix: An IoT-Enabled Ankle Wearable for Sleepwalking Detection, focusing on innovative healthcare monitoring solutions.",
-        },
-        {
-          id: "co-achiever-award",
-          title: "Achiever Award - Academic Year 2025-2026",
-          image: "/images/achievements/Co-Curriculars/Achiever award.png",
-          detail:
-            "Recognized as an Achiever - 2026 for outstanding academic, leadership, and extracurricular accomplishments, including a Scopus-indexed research publication, district-level competition success, and Anna University zonal sports achievement.",
-        },
-      ],
-    },
-    {
-      title: "Extra-Curriculars",
-      items: [
-        {
-          id: "extra-awareness-creative",
-          title: "Awareness & Creative Initiatives",
-          image:
-            "/images/achievements/Extra-Curriculars/Awareness and Creative Initiatives/Reels Competition.jpg",
-          detail:
-            "This subsection highlights awareness-driven and creative initiatives, including mime performances for social causes, digital awareness videos, and public-impact content creation through competition reels.",
-        },
-        {
-          id: "extra-sports-others",
-          title: "Sports and Others",
-          image:
-            "/images/achievements/Extra-Curriculars/Sports and Others/100m-Winner1.jpeg",
-          detail:
-            "This subsection includes sports and miscellaneous achievements, including participation and recognition connected to district and zonal level activities, along with broader extracurricular contributions.",
-        },
-      ],
-    },
-    {
-      title: "Leadership",
-      items: [
-        {
-          id: "lead-eldp",
-          title:
-            "Finalist - Entreprenuership and Leadership Development Program",
-          image: "/images/achievements/Leadership/ELDP.jpg",
-          detail:
-            "Selected as a finalist in Moonshot Inc’s Entrepreneurship and Leadership Development Program; led a team through ideation, strategy development, and final-round presentation.",
-        },
-        {
-          id: "lead-representative",
-          title: "Best Class Representative - 2nd Year",
-          image: "/images/achievements/Leadership/Representative 2nd YR.jpg",
-          detail:
-            "Awarded for outstanding leadership in both odd and even semesters, and reappointed for an additional semester based on performance and responsibility.",
-        },
-        {
-          id: "lead-gfg-cm",
-          title: "GeeksforGeeks - Campus Mantri",
-          image: "/images/achievements/Leadership/gfg cm.png",
-          detail:
-            "Campus Mantri – GeeksforGeeks (KIOT) I actively promote coding culture, organize technical events, and build a strong developer community on campus. I serve as a bridge between students and the GeeksforGeeks platform, encouraging peer learning, problem-solving, and skill development.",
-        },
-        {
-          id: "code-to-career",
-          title: "Technical Speaker - Workshop : Code to Career",
-          image: "/images/achievements/Leadership/code-to-career.jpeg",
-          detail:
-            "Delivered a technical talk during our college symposium workshop 'Code to Career' on the topics of Data Science, Data Engineering, Data Analytics, and LinkedIn Profile Management. Guided students on career pathways, required skillsets, and strategies to build a strong professional presence.",
-        },
-      ],
-    },
-    {
+      id: "certifications",
       title: "Certifications",
       items: [
         {
@@ -242,6 +132,204 @@ function App() {
             "/images/achievements/Certifications/AI Fluency Framework and Foundations.jpg",
           detail:
             "Completed Anthropic Academy certification on AI Fluency: Framework and Foundations, where I came to know about the 4D's and basics of Prompt Engineering.",
+        },
+      ],
+    },
+    {
+      id: "co-curriculars",
+      title: "Co-curriculars",
+      items: [
+        {
+          id: "co-11th-rank",
+          title: "School Topper (11th Grade) - AY 2022",
+          image: "/images/achievements/Co-Curriculars/11th rank.jpeg",
+          detail:
+            "School Topper – Overall 3rd Rank (11th Grade) - Recognized as School Topper for securing Overall 3rd Rank in Grade 11 through consistent academic excellence.",
+        },
+        {
+          id: "co-12th-rank",
+          title: "School Topper (12th Grade) - AY 2023",
+          image: "/images/achievements/Co-Curriculars/12th rank.jpeg",
+          detail:
+            "School Topper – Overall 1st Rank (12th Grade) - Recognized as School Topper for securing Overall 1st Rank in Grade 12 through consistent academic excellence.",
+        },
+        {
+          id: "co-academic-topper",
+          title: "Academic Topper - 1st Year",
+          image:
+            "/images/achievements/Co-Curriculars/Academic Topper 1st YR.jpg",
+          detail:
+            "Earned the Academic Topper Award in my first year for achieving high academic standards throughout the year by scoring CGPA 9.216/10.",
+        },
+        {
+          id: "co-paper-publication",
+          title: "Research Paper Publication - SleepSentrix",
+          image: "/images/achievements/Co-Curriculars/EK-Paper_Publishment.jpg",
+          detail:
+            "Published a research paper in IRJAEH for the project - SleepSentrix: An IoT-Enabled Ankle Wearable for Sleepwalking Detection, focusing on innovative healthcare monitoring solutions.",
+        },
+        {
+          id: "co-achiever-award",
+          title: "Achiever Award - Academic Year 2025-2026",
+          image: "/images/achievements/Co-Curriculars/Achiever award.png",
+          detail:
+            "Recognized as an Achiever - 2026 for outstanding academic, leadership, and extracurricular accomplishments, including a Scopus-indexed research publication, district-level competition success, and Anna University zonal sports achievement.",
+        },
+      ],
+    },
+    {
+      id: "leaderships",
+      title: "Leaderships",
+      items: [
+        {
+          id: "lead-eldp",
+          title:
+            "Finalist - Entreprenuership and Leadership Development Program",
+          image: "/images/achievements/Leadership/ELDP.jpg",
+          detail:
+            "Selected as a finalist in Moonshot Inc’s Entrepreneurship and Leadership Development Program; led a team through ideation, strategy development, and final-round presentation.",
+        },
+        {
+          id: "lead-representative",
+          title: "Best Class Representative - 2nd Year",
+          image: "/images/achievements/Leadership/Representative 2nd YR.jpg",
+          detail:
+            "Awarded for outstanding leadership in both odd and even semesters, and reappointed for an additional semester based on performance and responsibility.",
+        },
+        {
+          id: "lead-gfg-cm",
+          title: "GeeksforGeeks - Campus Mantri",
+          image: "/images/achievements/Leadership/gfg cm.png",
+          detail:
+            "Campus Mantri – GeeksforGeeks (KIOT) I actively promote coding culture, organize technical events, and build a strong developer community on campus. I serve as a bridge between students and the GeeksforGeeks platform, encouraging peer learning, problem-solving, and skill development.",
+        },
+        {
+          id: "code-to-career",
+          title: "Technical Speaker - Workshop : Code to Career",
+          image: "/images/achievements/Leadership/code-to-career.jpeg",
+          detail:
+            "Delivered a technical talk during our college symposium workshop 'Code to Career' on the topics of Data Science, Data Engineering, Data Analytics, and LinkedIn Profile Management. Guided students on career pathways, required skillsets, and strategies to build a strong professional presence.",
+        },
+      ],
+    },
+    {
+      id: "extra-curriculars",
+      title: "Extra curriculars",
+      items: [
+        {
+          id: "extra-awareness-creative",
+          title: "Awareness & Creative Initiatives",
+          image:
+            "/images/achievements/Extra-Curriculars/Awareness and Creative Initiatives/Reels Competition.jpg",
+          detail:
+            "This subsection highlights awareness-driven and creative initiatives, including mime performances for social causes, digital awareness videos, and public-impact content creation through competition reels.",
+        },
+        {
+          id: "extra-sports-others",
+          title: "Sports and Others",
+          image:
+            "/images/achievements/Extra-Curriculars/Sports and Others/100m-Winner1.jpeg",
+          detail:
+            "This subsection includes sports and miscellaneous achievements, including participation and recognition connected to district and zonal level activities, along with broader extracurricular contributions.",
+        },
+      ],
+    },
+  ];
+
+  const skillSections = [
+    {
+      title: "Frontend Development",
+      items: [
+        { label: "HTML", icon: "/images/skills/html.png", alt: "HTML" },
+        { label: "CSS", icon: "/images/skills/css.png", alt: "CSS" },
+        { label: "JS", icon: "/images/skills/js.png", alt: "JavaScript" },
+      ],
+    },
+    {
+      title: "Backend Development",
+      items: [
+        {
+          label: "Springboot",
+          icon: "/images/skills/spring-logo.png",
+          alt: "Spring Boot",
+        },
+        {
+          label: "FastAPI",
+          icon: "/images/skills/fastapi.svg",
+          alt: "FastAPI",
+        },
+      ],
+    },
+    {
+      title: "Programming language",
+      items: [
+        { label: "Java", icon: "/images/skills/java.png", alt: "Java" },
+        { label: "Python", icon: "/images/skills/python.png", alt: "Python" },
+      ],
+    },
+    {
+      title: "Databases",
+      items: [
+        {
+          label: "PostgreSQL",
+          icon: "/images/skills/postgres.png",
+          alt: "PostgreSQL",
+        },
+        { label: "MySQL", icon: "/images/skills/mysql.png", alt: "MySQL" },
+        { label: "NeonDB", icon: "/images/skills/neon.png", alt: "NeonDB" },
+      ],
+    },
+    {
+      title: "API and Testing",
+      items: [
+        {
+          label: "Postman",
+          icon: "/images/skills/postman.png",
+          alt: "Postman",
+        },
+        {
+          label: "Swagger",
+          icon: "/images/skills/swagger.png",
+          alt: "Swagger",
+        },
+      ],
+    },
+    {
+      title: "Deployment and Dockerisation",
+      items: [
+        { label: "Vercel", icon: "/images/skills/vercel.svg", alt: "Vercel" },
+        { label: "Docker", icon: "/images/skills/docker.png", alt: "Docker" },
+      ],
+    },
+    {
+      title: "Version Control",
+      items: [
+        { label: "Git", icon: "/images/skills/git.png", alt: "Git" },
+        { label: "GitHub", icon: "/images/skills/github.png", alt: "GitHub" },
+      ],
+    },
+    {
+      title: "Tools and IDEs",
+      items: [
+        {
+          label: "Eclipse",
+          icon: "/images/skills/eclipse.png",
+          alt: "Eclipse",
+        },
+        {
+          label: "VS Code",
+          icon: "/images/skills/vscode.png",
+          alt: "VS Code",
+        },
+        {
+          label: "Figma",
+          icon: "/images/skills/figma.png",
+          alt: "Figma",
+        },
+        {
+          label: "Canva",
+          icon: "/images/skills/canva.png",
+          alt: "Canva",
         },
       ],
     },
@@ -394,8 +482,8 @@ function App() {
     },
   ];
 
-  const openAchievementCarousel = (categoryTitle, index, items = null) => {
-    setActiveAchievementCategory(categoryTitle);
+  const openAchievementCarousel = (categoryId, index, items = null) => {
+    setActiveAchievementCategory(categoryId);
     setActiveAchievementItems(items);
     setActiveAchievementIndex(index);
   };
@@ -455,7 +543,7 @@ function App() {
 
   const activeCategoryItems =
     achievementCategories.find(
-      (category) => category.title === activeAchievementCategory,
+      (category) => category.id === activeAchievementCategory,
     )?.items ?? [];
   const currentCarouselItems = activeAchievementItems ?? activeCategoryItems;
 
@@ -477,16 +565,45 @@ function App() {
       {/* SECTION 1: INTRODUCTION */}
       <section id="home" className="section">
         <div className="home-foreground">
-          <h2 className="hero-title">
-            Hello World, Welcome you all to <TypingText text="EK's Portfolio" />
-            <span className="blinking-exclamation">!</span>
-          </h2>
-          <PixelCard variant="pink" className="profile-canvas">
-            <img
-              src="/images/profile/profile.png"
-              alt="Elango Kannan profile"
-            />
-          </PixelCard>
+          <div className="hero-copy">
+            <p className="hero-intro">Hey, I&apos;m Elango K.</p>
+            <h2 className="hero-title hero-title--stacked">
+              <span>Code.</span>
+              <span>Create.</span>
+              <span>Innovate.</span>
+            </h2>
+            <p className="hero-subtitle">Aspiring Java Full Stack Developer.</p>
+            <div className="hero-actions">
+              <button className="ek-btn ek-btn--hero" type="button">
+                <Download size={18} />
+                <span>Resume</span>
+              </button>
+              <button
+                className="ek-btn ek-btn--hero"
+                type="button"
+                onClick={() => scrollToSection("projects")}
+              >
+                <FolderKanban size={18} />
+                <span>Projects</span>
+              </button>
+              <button
+                className="ek-btn ek-btn--hero"
+                type="button"
+                onClick={() => scrollToSection("contact")}
+              >
+                <Mail size={18} />
+                <span>Contact</span>
+              </button>
+            </div>
+          </div>
+          <div className="hero-visual">
+            <PixelCard variant="pink" className="profile-canvas">
+              <img
+                src="/images/profile/profile.png"
+                alt="Elango Kannan profile"
+              />
+            </PixelCard>
+          </div>
         </div>
 
         <section id="about" className="section">
@@ -499,15 +616,20 @@ function App() {
               width: "100%",
               lineHeight: "1.7",
               fontSize: "1.25rem",
+              textAlign: "justify",
             }}
           >
-            <p style={{ textAlign: "center", marginBottom: "24px" }}>
-              I am Elango Kannan 🌟, pursuing B.E. Computer Science Engineering
-              at Knowledge Institute of Technology. Passionate about Frontend
-              Development and Java Programming, with a strong academic record
-              and leadership background. I enjoy building user-friendly
-              applications and continuously improving my technical and
-              problem-solving skills.
+            <p style={{ marginBottom: "24px" }}>
+              I am a final-year Computer Science Engineering student driven by a 
+              passion for building modern, user-centric applications. 
+              My journey began with Frontend Development and Java programming, 
+              and I am currently expanding my expertise into backend development 
+              with Spring Boot to become a Full Stack Java Developer. I enjoy 
+              turning ideas into real-world solutions through clean code, thoughtful 
+              design, and continuous learning. Beyond technical skills, I value 
+              leadership, collaboration, and lifelong growth, believing that the 
+              best software is created by teams that learn, innovate, and inspire 
+              together.
             </p>
 
             <div
@@ -661,188 +783,37 @@ function App() {
           </div>
         </section>
 
-        <div>
-          <button className="ek-btn">Download Resume</button>
-          <button
-            className="ek-btn"
-            onClick={() => scrollToSection("projects")}
-          >
-            View Projects
-          </button>
-          <button className="ek-btn" onClick={() => scrollToSection("contact")}>
-            Contact EK
-          </button>
-        </div>
       </section>
 
       {/* SECTION 3: SKILLS */}
       <section id="skills" className="section">
         <h2 className="section-title about-main-title">Skills</h2>
         <div className="skills-layout">
-          <div className="skills-group">
-            <div className="skills-items-grid">
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/java.png"
-                    alt="Java"
-                  />
-                </div>
-                <span className="skill-label">Java</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/python.png"
-                    alt="Python"
-                  />
-                </div>
-                <span className="skill-label">Python</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/html.png"
-                    alt="HTML"
-                  />
-                </div>
-                <span className="skill-label">HTML</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/css.png"
-                    alt="CSS"
-                  />
-                </div>
-                <span className="skill-label">CSS</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/js.png"
-                    alt="JavaScript"
-                  />
-                </div>
-                <span className="skill-label">JS</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/spring-logo.png"
-                    alt="FastAPI"
-                  />
-                </div>
-                <span className="skill-label">SpringBoot</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/fastapi.svg"
-                    alt="FastAPI"
-                  />
-                </div>
-                <span className="skill-label">FastAPI</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/mysql.png"
-                    alt="MySQL"
-                  />
-                </div>
-                <span className="skill-label">MYSQL</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/postgres.png"
-                    alt="Postgres"
-                  />
-                </div>
-                <span className="skill-label">POSTGRES</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/vscode.png"
-                    alt="VS Code"
-                  />
-                </div>
-                <span className="skill-label">VS CODE</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/eclipse.png"
-                    alt="VS Code"
-                  />
-                </div>
-                <span className="skill-label">Eclipse</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/github.png"
-                    alt="VS Code"
-                  />
-                </div>
-                <span className="skill-label">Github</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/figma.png"
-                    alt="Figma"
-                  />
-                </div>
-                <span className="skill-label">Figma</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/canva.png"
-                    alt="Canva"
-                  />
-                </div>
-                <span className="skill-label">Canva</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/postman.png"
-                    alt="Postman"
-                  />
-                </div>
-                <span className="skill-label">POSTMAN</span>
-              </div>
-              <div className="skill-item">
-                <div className="skill-square-card">
-                  <img
-                    className="skill-icon"
-                    src="/images/skills/swagger.png"
-                    alt="Swagger"
-                  />
-                </div>
-                <span className="skill-label">SWAGGER</span>
+          {skillSections.map((group) => (
+            <div key={group.title} className="skills-group">
+              <h3 className="skills-group-title">{group.title}</h3>
+              <div className="skills-items-grid">
+                {group.items.map((skill) => (
+                  <div key={skill.label} className="skill-item">
+                    <div
+                      className={`skill-square-card ${skill.icon ? "" : "skill-square-card--text"}`}
+                    >
+                      {skill.icon ? (
+                        <img
+                          className="skill-icon"
+                          src={skill.icon}
+                          alt={skill.alt ?? skill.label}
+                        />
+                      ) : (
+                        <span className="skill-text-only">{skill.label}</span>
+                      )}
+                    </div>
+                    <span className="skill-label">{skill.label}</span>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -910,7 +881,7 @@ function App() {
                         onClick={() => {
                           if (achievement.id === "extra-awareness-creative") {
                             openAchievementCarousel(
-                              category.title,
+                              category.id,
                               0,
                               awarenessCreativeSlides,
                             );
@@ -918,16 +889,16 @@ function App() {
                           }
                           if (achievement.id === "extra-sports-others") {
                             openAchievementCarousel(
-                              category.title,
+                              category.id,
                               0,
                               sportsAndOthersSlides,
                             );
                             return;
                           }
-                          openAchievementCarousel(category.title, index);
+                          openAchievementCarousel(category.id, index);
                         }}
                       >
-                        {category.title === "Extra-Curriculars"
+                        {category.id === "extra-curriculars"
                           ? "Know More"
                           : "About"}
                       </button>
