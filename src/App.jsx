@@ -787,7 +787,7 @@ function App() {
 
       {/* SECTION 3: SKILLS */}
       <section id="skills" className="section">
-        <h2 className="section-title about-main-title">Skills</h2>
+        <h2 className="section-title about-main-title">Techstacks I Work With!</h2>
         <div className="skills-layout">
           {skillSections.map((group) => (
             <div key={group.title} className="skills-group">
