@@ -413,10 +413,18 @@
     @apply grid gap-3 mt-auto;
   }
 
+  .project-actions--single {
+    grid-template-columns: 1fr;
+  }
+
   .project-btn {
     padding: 10px 14px;
     border-color: var(--primary);
     @apply rounded-xl border text-center no-underline text-[1rem] font-bold transition duration-300;
+  }
+
+  .project-actions--single .project-btn {
+    @apply w-full;
   }
 
   .project-btn-demo {

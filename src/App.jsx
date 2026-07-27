@@ -35,22 +35,25 @@ function App() {
       githubLink: "https://github.com/Elango-Kannan-00/ResolveR-Backend.git",
     },
     {
-    title: "NeerMai Valam - Smart Rural Water Management System",
-    description: "An IoT-enabled smart water distribution and monitoring system that automates equitable rural water supply using the 55 LPCD standard.",
-    image: "/images/projects/logo.png",
-    githubLink: "https://github.com/Elango-Kannan-00/NeerMai-Valam",
+      title: "NeerMai Valam - Smart Rural Water Management System",
+      description: "An IoT-enabled smart water distribution and monitoring system that automates equitable rural water supply using the 55 LPCD standard.",
+      image: "/images/projects/logo.png",
+      githubLink: "https://github.com/Elango-Kannan-00/NeerMai-Valam",
+      singleAction: true,
     },
     {
-    title: "Student Management System",
-    description: "A RESTful Student Management System that streamlines student record management with CRUD operations, validation, and database integration.",
-    image: "/images/projects/student-management-system.png",
-    githubLink: "https://github.com/Elango-Kannan-00/SMS-SpringBoot-Backend",
+      title: "Student Management System",
+      description: "A RESTful Student Management System that streamlines student record management with CRUD operations, validation, and database integration.",
+      image: "/images/projects/student-management-system.png",
+      githubLink: "https://github.com/Elango-Kannan-00/SMS-SpringBoot-Backend",
+      singleAction: true,
     },
     {
-    title: "Employee Management System",
-    description: "A Spring Boot-based Employee Management System that simplifies employee record management through secure CRUD operations and RESTful APIs.",
-    image: "/images/projects/employee-management-system.webp",
-    githubLink: "https://github.com/Elango-Kannan-00/EMS-SpringBoot-Backend",
+      title: "Employee Management System",
+      description: "A Spring Boot-based Employee Management System that simplifies employee record management through secure CRUD operations and RESTful APIs.",
+      image: "/images/projects/employee-management-system.webp",
+      githubLink: "https://github.com/Elango-Kannan-00/EMS-SpringBoot-Backend",
+      singleAction: true,
     },
     {
       title: "Article Recommendation",
@@ -62,8 +65,7 @@ function App() {
     },
     {
       title: "Emission-X",
-      description:
-        "A web application that monitors industrial CO₂ emissions and uses Machine Learning models to analyze emission levels and suggest eco-friendly mitigation strategies.",
+      description: "A web application that monitors industrial CO₂ emissions and uses Machine Learning models to analyze emission levels and suggest eco-friendly mitigation strategies.",
       image: "/images/projects/emission x.png",
       demoLink: "#",
       githubLink:
@@ -71,11 +73,11 @@ function App() {
     },
     {
       title: "SleepSentrix",
-      description:
-        "An IoT-enabled smart ankle band that uses sensors like accelerometer, gyroscope, GPS, and camera to monitor movement and send real-time alerts to loved ones in case of emergencies.",
-      image: "/images/projects/sleepwalking.jpg",
+      description: "An IoT-enabled smart ankle band that uses sensors like accelerometer, gyroscope, GPS, and camera to monitor movement and send real-time alerts to loved ones in case of emergencies.",
+      image: "/images/projects/sleepsentrix.png",
       demoLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/Elango-Kannan-00/Sleep-Sentrix.git",
+      singleAction: true,
     },
   ];
 
@@ -850,15 +852,21 @@ function App() {
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
-                <div className="project-actions">
-                  <a
-                    className="project-btn project-btn-demo"
-                    href={project.demoLink}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Demo
-                  </a>
+                <div
+                  className={`project-actions${
+                    project.singleAction ? " project-actions--single" : ""
+                  }`}
+                >
+                  {!project.singleAction && (
+                    <a
+                      className="project-btn project-btn-demo"
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Demo
+                    </a>
+                  )}
                   <a
                     className="project-btn project-btn-github"
                     href={project.githubLink}
