@@ -591,10 +591,15 @@ function App() {
             </h2>
             <p className="hero-subtitle">Aspiring Java Full Stack Developer.</p>
             <div className="hero-actions">
-              <button className="ek-btn ek-btn--hero" type="button">
+              <a
+                className="ek-btn ek-btn--hero"
+                href="/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Download size={18} />
                 <span>Resume</span>
-              </button>
+              </a>
               <button
                 className="ek-btn ek-btn--hero"
                 type="button"
