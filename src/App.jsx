@@ -28,6 +28,31 @@ function App() {
 
   const projectsData = [
     {
+      title: "ResolveR - Complaint Management System",
+      description: "A role-based Complaint Management System that streamlines campus grievance handling with dedicated Student, HOD, and Admin portals.",
+      image: "/images/projects/resolver-logo.png",
+      demoLink: "https://resolve-r-frontend.vercel.app/",
+      githubLink: "https://github.com/Elango-Kannan-00/ResolveR-Backend.git",
+    },
+    {
+    title: "NeerMai Valam - Smart Rural Water Management System",
+    description: "An IoT-enabled smart water distribution and monitoring system that automates equitable rural water supply using the 55 LPCD standard.",
+    image: "/images/projects/logo.png",
+    githubLink: "https://github.com/Elango-Kannan-00/NeerMai-Valam",
+    },
+    {
+    title: "Student Management System",
+    description: "A RESTful Student Management System that streamlines student record management with CRUD operations, validation, and database integration.",
+    image: "/images/projects/student-management-system.png",
+    githubLink: "https://github.com/Elango-Kannan-00/SMS-SpringBoot-Backend",
+    },
+    {
+    title: "Employee Management System",
+    description: "A Spring Boot-based Employee Management System that simplifies employee record management through secure CRUD operations and RESTful APIs.",
+    image: "/images/projects/employee-management-system.webp",
+    githubLink: "https://github.com/Elango-Kannan-00/EMS-SpringBoot-Backend",
+    },
+    {
       title: "Article Recommendation",
       description:
         "A content-based recommendation system that analyzes article titles to understand user intent and suggests the top 5 similar articles instantly. Built with Machine Learning and deployed using Flask for real-time interaction.",
@@ -43,14 +68,6 @@ function App() {
       demoLink: "#",
       githubLink:
         "https://github.com/CarbonFootprint-Hackathon/CarbonFootprint.git",
-    },
-    {
-      title: "Expense-Tracker",
-      description:
-        "A simple web application that helps users track their spending and visualize expenses using interactive bar, line, and pie charts.",
-      image: "/images/projects/expense tracker.png",
-      demoLink: "https://expense-tracker-sandy-iota.vercel.app/",
-      githubLink: "https://github.com/Elango-Kannan-00/Expense-Tracker.git",
     },
     {
       title: "SleepSentrix",
