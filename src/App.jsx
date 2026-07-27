@@ -64,14 +64,6 @@ function App() {
       githubLink: "https://github.com/Logic-Loom-00/Article_Recommendation.git",
     },
     {
-      title: "Emission-X",
-      description: "A web application that monitors industrial CO₂ emissions and uses Machine Learning models to analyze emission levels and suggest eco-friendly mitigation strategies.",
-      image: "/images/projects/emission x.png",
-      demoLink: "#",
-      githubLink:
-        "https://github.com/CarbonFootprint-Hackathon/CarbonFootprint.git",
-    },
-    {
       title: "SleepSentrix",
       description: "An IoT-enabled smart ankle band that uses sensors like accelerometer, gyroscope, GPS, and camera to monitor movement and send real-time alerts to loved ones in case of emergencies.",
       image: "/images/projects/sleepsentrix.png",
