@@ -35,8 +35,8 @@ function App() {
       githubLink: "https://github.com/Elango-Kannan-00/ResolveR-Backend.git",
     },
     {
-      title: "NeerMai Valam - Smart Rural Water Management System",
-      description: "An IoT-enabled smart water distribution and monitoring system that automates equitable rural water supply using the 55 LPCD standard.",
+      title: "NeerMai Valam - Equitable Rural Water Management System",
+      description: "An IoT-enabled Equitable water distribution and monitoring system that automates equitable rural water supply using the 55 LPCD standard.",
       image: "/images/projects/logo.png",
       githubLink: "https://github.com/Elango-Kannan-00/NeerMai-Valam",
       singleAction: true,
@@ -193,6 +193,13 @@ function App() {
           image: "/images/achievements/Co-Curriculars/Achiever award.png",
           detail:
             "Recognized as an Achiever - 2026 for outstanding academic, leadership, and extracurricular accomplishments, including a Scopus-indexed research publication, district-level competition success, and Anna University zonal sports achievement.",
+        },
+        {
+          id: "co-achiever-award",
+          title: "Top 500 in Niral Thiruizha 3.o",
+          image: "/images/achievements/Co-Curriculars/logo.png",
+          detail:
+            "Selected among the Top 500 teams in Niral Thiruvizha 3.0 and awarded ₹15,000 in prototype development funding for the NeerMai Valam Equitable rural water management project.",
         },
       ],
     },
