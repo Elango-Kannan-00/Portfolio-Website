@@ -1,5 +1,4 @@
 ﻿import React, { useState, useEffect } from "react";
-import "./App.css";
 import Navbar from "./components/Navbar";
 import PixelCard from "./components/PixelCard";
 import Particles from "./components/Particles";
@@ -628,16 +627,8 @@ function App() {
           <h1 className="section-title about-main-title">
             About Elango Kannan
           </h1>
-          <div
-            style={{
-              maxWidth: "1000px",
-              width: "100%",
-              lineHeight: "1.7",
-              fontSize: "1.25rem",
-              textAlign: "justify",
-            }}
-          >
-            <p style={{ marginBottom: "24px" }}>
+          <div className="mx-auto w-full max-w-[1000px] text-justify text-[1.25rem] leading-[1.7]">
+            <p className="mb-6">
               I am a final-year Computer Science Engineering student driven by a 
               passion for building modern, user-centric applications. 
               My journey began with Frontend Development and Java programming, 
@@ -650,48 +641,25 @@ function App() {
               together.
             </p>
 
-            <div
-              className="about-columns"
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "flex-start",
-                gap: "80px",
-                flexWrap: "wrap",
-              }}
-            >
-              <div
-                className="about-column"
-                style={{ flex: 1, minWidth: "320px", textAlign: "left" }}
-              >
-                <h3 className="about-subtitle">Academic Information</h3>
-                <div
-                  className="about-card about-card-academic"
-                  style={{
-                    width: "100%",
-                    maxWidth: "460px",
-                    margin: "0 auto",
-                  }}
-                >
-                  <p
-                    style={{
-                      marginBottom: "6px",
-                      fontWeight: 600,
-                      color: "var(--heading)",
-                    }}
-                  >
+            <div className="about-columns grid w-full grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-16">
+              <div className="about-column flex w-full flex-col items-center text-left">
+                <h3 className="mb-5 w-max whitespace-nowrap border-b-2 border-[color:var(--heading)] pb-1 text-center text-[1.5rem] font-bold text-[color:var(--heading)] sm:text-[1.2rem]">
+                  Academic Information
+                </h3>
+                <div className="w-full max-w-[560px] rounded-xl border border-[#333] bg-ek-card p-[18px] pl-[30px] transition duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.16)] sm:pl-[18px]">
+                  <p className="mb-1.5 font-semibold text-[color:var(--heading)]">
                     SSLC
                   </p>
-                  <p style={{ margin: "0 0 6px 0" }}>
-                    <span className="about-label about-label-with-icon">
+                  <p className="mb-1.5">
+                    <span className="inline-flex items-center gap-[6px] font-semibold text-[color:var(--heading)]">
                       <GraduationCap size={16} />
                       School
                     </span>{" "}
                     - Vivekananda Balamandir Matriculation School, Nainampatty,
                     Salem.
                   </p>
-                  <p style={{ margin: "0 0 14px 0" }}>
-                    <span className="about-label about-label-with-icon">
+                  <p className="mb-3.5">
+                    <span className="inline-flex items-center gap-[6px] font-semibold text-[color:var(--heading)]">
                       <Trophy size={16} />
                       Score
                     </span>{" "}
@@ -699,100 +667,106 @@ function App() {
                     Tamil Nadu Government.
                   </p>
 
-                  <p
-                    style={{
-                      marginBottom: "6px",
-                      fontWeight: 600,
-                      color: "var(--heading)",
-                    }}
-                  >
+                  <p className="mb-1.5 font-semibold text-[color:var(--heading)]">
                     HSC
                   </p>
-                  <p style={{ margin: "0 0 6px 0" }}>
-                    <span className="about-label about-label-with-icon">
+                  <p className="mb-1.5">
+                    <span className="inline-flex items-center gap-[6px] font-semibold text-[color:var(--heading)]">
                       <GraduationCap size={16} />
                       School
                     </span>{" "}
                     - Government Boys Higher Secondary School, Vennandur,
                     Namakkal.
                   </p>
-                  <p style={{ margin: "0 0 14px 0" }}>
-                    <span className="about-label about-label-with-icon">
+                  <p className="mb-3.5">
+                    <span className="inline-flex items-center gap-[6px] font-semibold text-[color:var(--heading)]">
                       <Trophy size={16} />
                       Score
                     </span>{" "}
                     - 93.83 %
                   </p>
 
-                  <p
-                    style={{
-                      marginBottom: "6px",
-                      fontWeight: 600,
-                      color: "var(--heading)",
-                    }}
-                  >
+                  <p className="mb-1.5 font-semibold text-[color:var(--heading)]">
                     Bachelor of Engineering - CSE
                   </p>
-                  <p style={{ margin: "0 0 6px 0" }}>
-                    <span className="about-label about-label-with-icon">
+                  <p className="mb-1.5">
+                    <span className="inline-flex items-center gap-[6px] font-semibold text-[color:var(--heading)]">
                       <GraduationCap size={16} />
                       College
                     </span>{" "}
                     - Knowledge Institute of Technology, Salem.
                   </p>
-                  <p style={{ margin: 0 }}>
-                    <span className="about-label about-label-with-icon">
+                  <p className="m-0">
+                    <span className="inline-flex items-center gap-[6px] font-semibold text-[color:var(--heading)]">
                       <Trophy size={16} />
                       Score
                     </span>{" "}
-                    - 8.893 / 10
+                    - 8.888 / 10
                   </p>
                 </div>
               </div>
 
-              <div
-                className="about-column"
-                style={{ flex: 1, minWidth: "320px", textAlign: "left" }}
-              >
-                <h3 className="about-subtitle">Academic Progress</h3>
-                <div
-                  className="about-card"
-                  style={{
-                    width: "100%",
-                    maxWidth: "460px",
-                    marginLeft: "auto",
-                  }}
-                >
-                  <ul
-                    className="about-progress-list"
-                    style={{ marginTop: "8px" }}
-                  >
+              <div className="about-column flex w-full flex-col items-center text-left">
+                <h3 className="mb-5 w-max whitespace-nowrap border-b-2 border-[color:var(--heading)] pb-1 text-center text-[1.5rem] font-bold text-[color:var(--heading)] sm:text-[1.2rem]">
+                  Academic Progress
+                </h3>
+                <div className="w-full max-w-[560px] rounded-xl border border-[#333] bg-ek-card p-6 transition duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.16)]">
+                  <ul className="m-0 mt-2 list-none space-y-4 p-0">
                     {/* <li><Trophy size={16} /> </li> */}
-                    <li>
-                      <Trophy size={16} /> Ranked 1st in school with 93.83% in
-                      Grade 12.
+                    <li className="flex items-start gap-2 leading-7">
+                      <span className="mt-1 inline-flex shrink-0 items-center justify-center text-[color:var(--heading)]">
+                        <Trophy size={16} />
+                      </span>
+                      <span>Ranked 1st in school with 93.83% in Grade 12.</span>
                     </li>
-                    <li>
-                      <Trophy size={16} /> Ranked 3rd in school with 78% in
-                      Grade 11.
+                    <li className="flex items-start gap-2 leading-7">
+                      <span className="mt-1 inline-flex shrink-0 items-center justify-center text-[color:var(--heading)]">
+                        <Trophy size={16} />
+                      </span>
+                      <span>Ranked 3rd in school with 78% in  Grade 11.</span>
                     </li>
-                    <li>
-                      <Trophy size={16} /> Maintaining a CGPA of 8.893/10 across
-                      5 semesters.
+                    <li className="flex items-start gap-2 leading-7">
+                      <span className="mt-1 inline-flex shrink-0 items-center justify-center text-[color:var(--heading)]">
+                        <Trophy size={16} />
+                      </span>
+                      <span>Maintaining a CGPA of 8.888 / 10 across 6 semesters.</span>
                     </li>
-                    <li>
-                      <Trophy size={16} /> Recipient of the Achiever Award 2026
-                      for excellence in academics, co-curricular, and
-                      extra-curricular activities.
+                    <li className="flex items-start gap-2 leading-7">
+                      <span className="mt-1 inline-flex shrink-0 items-center justify-center text-[color:var(--heading)]">
+                        <Trophy size={16} />
+                      </span>
+                      <span>
+                        Recipient of the Achiever Award 2026 for excellence in
+                        academics, co-curricular, and extra-curricular
+                        activities.
+                      </span>
                     </li>
-                    <li>
-                      <Trophy size={16} /> Served as a GeeksforGeeks Campus
-                      Ambassador, promoting coding and tech culture.
+                    <li className="flex items-start gap-2 leading-7">
+                      <span className="mt-1 inline-flex shrink-0 items-center justify-center text-[color:var(--heading)]">
+                        <Trophy size={16} />
+                      </span>
+                      <span>
+                        Served as a GeeksforGeeks Campus Ambassador, promoting
+                        coding and tech culture.
+                      </span>
                     </li>
-                    <li>
-                      <Trophy size={16} /> Secured a Top 500 position in Niral
-                      Thiruvizha 3.0 and received ₹15,000 for prototype
-                      development.
+                    <li className="flex items-start gap-2 leading-7">
+                      <span className="mt-1 inline-flex shrink-0 items-center justify-center text-[color:var(--heading)]">
+                        <Trophy size={16} />
+                      </span>
+                      <span>
+                        Secured a Top 500 position in Niral Thiruvizha 3.0 and
+                        received ₹15,000 for prototype development.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2 leading-7">
+                      <span className="mt-1 inline-flex shrink-0 items-center justify-center text-[color:var(--heading)]">
+                        <Trophy size={16} />
+                      </span>
+                      <span>
+                        Finalist of CodeZap&apos;26 - A 36 hour hackathon
+                        organized by Descience Open Source Club (DOS)
+                      </span>
                     </li>
                   </ul>
                 </div>

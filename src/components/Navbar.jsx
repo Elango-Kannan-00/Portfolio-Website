@@ -1,7 +1,20 @@
+import { useEffect, useState } from "react";
 import Dock from "./Dock";
 import { Home, User, Wrench, FolderKanban, Trophy, Mail } from "lucide-react";
 
 const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 640px)");
+    const update = () => setIsMobile(mediaQuery.matches);
+
+    update();
+    mediaQuery.addEventListener("change", update);
+
+    return () => mediaQuery.removeEventListener("change", update);
+  }, []);
+
   const handleNavClick = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -44,7 +57,14 @@ const Navbar = () => {
   ];
 
   return (
-    <Dock items={items} panelHeight={78} baseItemSize={58} magnification={82} />
+    <Dock
+      items={items}
+      panelHeight={isMobile ? 54 : 78}
+      baseItemSize={isMobile ? 36 : 58}
+      magnification={isMobile ? 44 : 82}
+      dockHeight={isMobile ? 160 : 256}
+      distance={isMobile ? 120 : 200}
+    />
   );
 };
 

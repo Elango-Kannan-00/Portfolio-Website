@@ -7,8 +7,6 @@ import {
 } from "motion/react";
 import { Children, cloneElement, useEffect, useMemo, useRef, useState } from "react";
 
-import "./Dock.css";
-
 function DockItem({
   children,
   className = "",
@@ -139,4 +137,3 @@ export default function Dock({
     </motion.div>
   );
 }
-
