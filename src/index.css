@@ -118,15 +118,15 @@
 
   .hero-visual {
     @apply flex justify-end items-center;
-    flex: 0 0 min(38vw, 560px);
+    flex: 0 0 min(32vw, 460px);
     min-width: 0;
     margin-left: auto;
-    margin-top: 18px;
-    transform: translateX(28px);
+    margin-top: 54px;
+    transform: translate(28px, 40px);
   }
 
   .profile-canvas {
-    width: min(560px, 100%);
+    width: min(460px, 100%);
     margin: 0;
     background-color: var(--bg);
     isolation: isolate;
